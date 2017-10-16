@@ -1443,7 +1443,7 @@ class ListCommand : Command {
 		enforceUsage(app_args.length == 0, "The list command supports no application arguments.");
 		logInfo("Packages present in the system and known to dub:");
 		foreach (p; dub.packageManager.getPackageIterator())
-			logInfo("  %s %s: %s", p.name, p.version_, p.path.toNativeString());
+			writefln("  %s %s: %s", p.name, p.version_, p.path.toNativeString());
 		logInfo("");
 		return 0;
 	}
